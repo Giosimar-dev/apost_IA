@@ -241,6 +241,9 @@
     <div class="notification" id="notification"></div>
 
     <script>
+      function voltarPagina() {
+      history.back();
+    }
       // Função para gerar um número aleatório entre min e max
       function gerarNumeroAleatorio(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
