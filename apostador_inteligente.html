@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Painel de Imagens</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .logo {
+      text-align: center;
+      margin-bottom: -10px;
+    }
+
+    .logo img {
+      max-width: 100%;
+      height: auto;
+    }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+        
+        .image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .image:hover {
+            transform: scale(1.05);
+        }
+        
+        .image img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .image .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .image:hover .overlay {
+            opacity: 1;
+        }
+        
+        .image .overlay a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+          <img src="img/Novo Projeto.png" alt="Logo" />
+        </div>
+    <div class="container">
+        <div class="image-grid">
+            <div class="image">
+                <img src="img/mega-sena-logo.png" alt="Imagem 1">
+                <div class="overlay">
+                    <a href="megasena.html">Clique aqui</a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="img/lotofacil-logo.png" alt="Imagem 2">
+                <div class="overlay">
+                    <a href="lotofacil.html">Clique aqui</a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="img/quina-logo.png" alt="Imagem 3">
+                <div class="overlay">
+                    <a href="quina.html">Clique aqui</a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="img/timemania-logo.png" alt="Imagem 4">
+                <div class="overlay">
+                    <a href="timemania.html">Clique aqui</a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="img/download.png" alt="Imagem 5">
+                <div class="overlay">
+                    <a href="lotomania.html">Clique aqui</a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="img/timemania-logo (1).png" alt="Imagem 6">
+                <div class="overlay">
+                    <a href="supersete.html">Clique aqui</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    // Se você quiser abrir as URLs em uma nova guia, adicione o seguinte código JavaScript:
+    window.onload = function() {
+        var links = document.getElementsByTagName('a');
+        for (var i = 0; i < links.length; i++) {
+            links[i].target = '_blank';
+        }
+    };
+</script>
