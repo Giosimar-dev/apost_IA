@@ -61,7 +61,7 @@
 </head>
 <body>
   <div class="container">
-    <form id="login-form" action="https://script.google.com/macros/s/AKfycbw2xoCTChzozhoGSWSquoVaZqBjndDtIBcMSAGbDMrVFavWqT7-ycKyPsfxy3jlulg4/exec" method="GET">
+    <form id="login-form">
       <h2>Bem-vindo</h2>
       <div class="form-group">
         <label for="username">Usuário:</label>
@@ -74,5 +74,21 @@
       <button type="submit">Entrar</button>
     </form>
   </div>
+
+  <script>
+    document.getElementById("login-form").addEventListener("submit", function(e) {
+      e.preventDefault(); // Impede o envio padrão do formulário
+
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Fazer a verificação do usuário e senha (exemplo simples)
+      if (username === "admin" && password === "12345") {
+        window.location.href = "https://apost-ia.vercel.app/apostador";
+      } else {
+        alert("Usuário ou senha inválidos. Tente novamente.");
+      }
+    });
+  </script>
 </body>
 </html>
