@@ -20,8 +20,20 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      max-width: 200px;
+      height: auto;
+    }
+
     h2 {
       text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
     }
 
     .form-group {
@@ -46,7 +58,7 @@
     button {
       width: 100%;
       padding: 10px;
-      background-color: #4caf50;
+      background-color: #004a96;
       border: none;
       color: #fff;
       border-radius: 4px;
@@ -55,14 +67,31 @@
     }
 
     button:hover {
-      background-color: #45a049;
+      background-color: #002b5e;
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        max-width: 90%;
+      }
+      
+      .logo img {
+        max-width: 150px;
+      }
+      
+      h2 {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="logo">
+      <img src="loterias_caixa_logo.png" alt="Loterias Caixa">
+    </div>
     <form id="login-form">
-      <h2>Bem-vindo 2</h2>
+      <h2>Bem-vindo(a)!</h2>
       <div class="form-group">
         <label for="username">Usuário:</label>
         <input type="text" id="username" name="username" required>
@@ -83,7 +112,7 @@
       var password = document.getElementById("password").value;
 
       // Fazer a verificação do usuário e senha (exemplo simples)
-      if (username === "User" && password === "12345") {
+      if (username === "USER4563" && password === "4563") {
         window.location.href = "https://apost-ia.vercel.app/apostador.html";
       } else {
         alert("Usuário ou senha inválidos. Tente novamente.");
